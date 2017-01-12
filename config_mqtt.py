@@ -1,14 +1,15 @@
 import auth as a
-rootDir="/root/rpi-mqtt-client"
+rootDir="/root/rpi-mqtt-client"  # root directory containing all files
 
 ###############
-dirScripts=rootDir+"/scripts/"
-logFile=rootDir+"/mqtt_logs"
+dirScripts=rootDir+"/scripts/" # directory containaing scripts to run
+logFile=rootDir+"/mqtt_logs"  # mqtt logs file
 errlogFile=rootDir+"/err_logs"
 stdOutlogFile=rootDir+"/stdout_logs"
 topicPrefix="rpi/status"
 subTopic="rpi/cmds"
 
+# cmds supported by RPI (posted through MQTT server on <subTopic>)
 cmds=["giveStatus",
       "getSupportedValues",
       "public_ip",
@@ -20,7 +21,7 @@ cmds=["giveStatus",
       "kill_socks",
       "restartScript"]
 
-
+# script executed depending on cmd received from MQTT server
 execCmdI=["status.sh",
          "values.json",
          "get_ip.sh",
@@ -32,6 +33,7 @@ execCmdI=["status.sh",
          "kill_socks.sh",
          "restartScript.sh"]
 
+# args of the script to be launched
 argsCmd=["",
          "",
          " "+dirScripts,
@@ -43,6 +45,7 @@ argsCmd=["",
          " "+dirScripts+" "+str(a.port_socks)+" "+a.host_ssh,
          " "+rootDir+" "+errlogFile+" "+stdOutlogFile]
 
+# topic suffix (concatenated to <topicPrefix>) on which to post the results/outputs of the script run
 topicI=["",
        "/supp/cmds",
        "/public/ip",
