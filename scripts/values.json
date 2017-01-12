@@ -1,0 +1,34 @@
+{
+  "cmds" : [{
+    "CmdVO" : {
+      "cmd" : "giveStatus",
+      "display" : "Status",
+      "description" : ""
+    }
+  }, {
+    "CmdVO" : {
+      "cmd" : "public_ip",
+      "display" : "IP Gateway",
+      "description" : ""
+    }
+  }, {
+    "CmdVO" : {
+      "cmd" : "hosts",
+      "display" : "Hosts",
+      "description" : ""
+    }
+  }, {
+    "CmdVO" : {
+      "cmd" : "reboot",
+      "display" : "Reboot",
+      "description" : "reboot the RPI"
+    }
+  }, {
+    "CmdVO" : {
+      "cmd" : "public_ip",
+      "display" : "IP Gateway",
+      "description" : ""
+    }
+  }
+  ]
+}

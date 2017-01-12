@@ -1,0 +1,9 @@
+mqtt_logs
+pid
+err_logs
+stdout_logs
+wget-log
+*.pyc
+auth.py
+ssh_pid
+network_usage/
