@@ -21,6 +21,7 @@ iOS app : [iOS rpi client mqtt](https://github.com/Lysuo/mqtt-client-rpi)
 ## Prerequisites 
 
 For ssh and socks tunnels, you will need to have an ssh access to a public server and be able to connect from the RPI to the server using a RSA key.
+You will need python installed and functional, as well as the module paho-mqtt (pip install paho-mqtt).
 
 ## Installing
 
